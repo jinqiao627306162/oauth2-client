@@ -16,5 +16,7 @@ security:
       user-authorization-uri: ${oauth2-server-url}/oauth/authorize
       access-token-uri: ${oauth2-server-url}/oauth/token
     resource:
-      jwt:
-        key-uri: ${oauth2-server-url}/oauth/token_key
+      userInfoUri: http://localhost:9401/user/getCurrentUser
+logging:
+  config:
+    classpath: log4j2-dev.xml
